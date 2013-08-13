@@ -1,3 +1,7 @@
-#Wed Sep 14 20:56:10 CEST 2011
 eclipse.preferences.version=1
+encoding//src/de/uni_hamburg/informatik/sep/zuul/Befehl.java=UTF-8
+encoding//src/de/uni_hamburg/informatik/sep/zuul/Befehlswoerter.java=UTF-8
+encoding//src/de/uni_hamburg/informatik/sep/zuul/Parser.java=UTF-8
+encoding//src/de/uni_hamburg/informatik/sep/zuul/Raum.java=UTF-8
+encoding//src/de/uni_hamburg/informatik/sep/zuul/Spiel.java=UTF-8
 encoding/<project>=UTF-8
