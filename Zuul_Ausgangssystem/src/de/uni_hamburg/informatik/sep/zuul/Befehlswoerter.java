@@ -1,7 +1,7 @@
 package de.uni_hamburg.informatik.sep.zuul;
 
 /**
- * Kennt alle gültigen Befehle.
+ * Kennt alle gültigen Befehle.s
  */
 public class Befehlswoerter {
     private static final String gueltigeBefehle[] = { "go", "quit", "help" };

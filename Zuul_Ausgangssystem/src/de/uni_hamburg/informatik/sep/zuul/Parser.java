@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  * Adventure-Game um. Bei jedem Aufruf liest er eine Zeile von der Konsole und
  * versucht, diese als einen Befehl aus bis zu zwei Wörtern zu interpretieren.
  * Er liefert den Befehl als ein Objekt der Klasse Befehl zurück.
- * 
+ * s
  * Der Parser verfügt über einen Satz an bekannten Befehlen. Er vergleicht die
  * Eingabe mit diesen Befehlen. Wenn die Eingabe keinen bekannten Befehl
  * enthält, dann liefert der Parser ein als unbekannter Befehl gekennzeichnetes

@@ -8,7 +8,7 @@ package de.uni_hamburg.informatik.sep.zuul;
  * 
  * Zum Spielen muss eine Instanz dieser Klasse erzeugt werden und an ihr die
  * Methode "spielen" aufgerufen werden.
- * 
+ * s
  * Diese Instanz erzeugt und initialisiert alle anderen Objekte der Anwendung:
  * Sie legt alle Räume und einen Parser an und startet das Spiel. Sie wertet
  * auch die Befehle aus, die der Parser liefert, und sorgt für ihre Ausführung.
