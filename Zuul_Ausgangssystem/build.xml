@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<project name="Zuul" default="archive">
+<description>Kompiliert und packt den Sourcecode</description>
+	<target name="init">
+		<mkdir dir="build/classes" />
+		<mkdir dir="dist" />
+	</target>
+	<target name="compile" depends="init" description="Kompiliert den Sourcecode">
+		<javac srcdir="src" destdir="build/classes" includeantruntime="false" />
+	</target>
+	<target name="archive" depends="compile" description="Erstellt das JAR">
+		<jar destfile="dist/project.jar" basedir="build/classes" />
+	</target>
+	<target name="clean" depends="init" description="Räumt auf">
+		<delete dir="build" />
+		<delete dir="dist" />
+	</target>
+</project>
