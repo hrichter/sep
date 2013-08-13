@@ -5,7 +5,7 @@ package de.uni_hamburg.informatik.sep.zuul;
  * aus zwei Zeichenketten: einem Befehlswort und einem zweiten Wort. Beim Befehl
  * "go west" beispielsweise sind die beiden Zeichenketten "go" und "west". Wenn
  * der Befehl nur aus einem Wort bestand, dann ist das zweite Wort
- * <code>null</code>.s
+ * <code>null</code>.
  * 
  * Benutzer dieser Klasse sind dafür zuständig, Befehle auf ihre Gültigkeit zu
  * prüfen. Wenn ein Spieler einen ungültigen Befehl eingegeben hat, sollte das
