@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * sEin Raum in der Welt von Zuul. Ein Raum ist mit anderen Räumen über Ausgänge
+ * Ein Raum in der Welt von Zuul. Ein Raum ist mit anderen Räumen über Ausgänge
  * verbunden, die in unterschiedlichen Richtungen liegen.
  */
 public class Raum {
