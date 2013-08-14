@@ -19,7 +19,6 @@
 	</target>
 	
 	<target name="compile" depends="init" description="Kompiliert den Sourcecode">
-<<<<<<< HEAD
 		<javac srcdir="src" destdir="${build.path}" excludes="**/*Test*.java" includeantruntime="false" encoding="utf8">
 			<classpath refid="classpath"></classpath>
 		</javac>
@@ -28,9 +27,6 @@
 		<javac srcdir="src" destdir="${test.path}" includes="**/*Test*.java" includeantruntime="false" encoding="utf8">
 			<classpath refid="classpath"></classpath>
 		</javac>
-=======
-		<javac srcdir="src" destdir="build/classes" excludes="**/*Test*.java" includeantruntime="false" encoding="utf8" />
->>>>>>> refs/remotes/origin/master
 	</target>
 	<target name="archive" depends="compile" description="Erstellt das JAR">
 		<jar destfile="${archive.path}/${ant.project.name}" basedir="build/classes" />
