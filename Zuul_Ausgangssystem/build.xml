@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<project name="Zuul" default="archive">
+<description>Kompiliert und packt den Sourcecode</description>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <property name="build.path" value="build/classes"/>
+    <property name="test.path" value="build/test"/>
+    <property name="archive.path" value="dist"/>
+	<property name="lib.dir" value="lib" />
+	
+	<path id="classpath">
+	    <fileset dir="${lib.dir}" includes="**/*.jar" />
+	</path>
+	
+	<target name="init">
+		<mkdir dir="${build.path}" />
+		<mkdir dir="${test.path}" />
+		<mkdir dir="${archive.path}" />
+	</target>
+	
+	<target name="compile" depends="init" description="Kompiliert den Sourcecode">
+<<<<<<< HEAD
+		<javac srcdir="src" destdir="${build.path}" excludes="**/*Test*.java" includeantruntime="false" encoding="utf8">
+			<classpath refid="classpath"></classpath>
+		</javac>
+	</target>
+	<target name="test-compile" depends="compile" description="Kompiliert den TestCode">
+		<javac srcdir="src" destdir="${test.path}" includes="**/*Test*.java" includeantruntime="false" encoding="utf8">
+			<classpath refid="classpath"></classpath>
+		</javac>
+=======
+		<javac srcdir="src" destdir="build/classes" excludes="**/*Test*.java" includeantruntime="false" encoding="utf8" />
+>>>>>>> refs/remotes/origin/master
+	</target>
+	<target name="archive" depends="compile" description="Erstellt das JAR">
+		<jar destfile="${archive.path}/${ant.project.name}" basedir="build/classes" />
+	</target>
+	<target name="clean" depends="init" description="Räumt auf">
+		<delete dir="${build.path}" />
+		<delete dir="${test.path}" />
+		<delete dir="${archive.path}" />
+	</target>
+
+</project>
