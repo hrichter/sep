@@ -7,7 +7,7 @@
 		<mkdir dir="dist" />
 	</target>
 	<target name="compile" depends="init" description="Kompiliert den Sourcecode">
-		<javac srcdir="src" destdir="build/classes" includeantruntime="false" encoding="utf8" />
+		<javac srcdir="src" destdir="build/classes" excludes="**/*Test*.java" includeantruntime="false" encoding="utf8" />
 	</target>
 	<target name="archive" depends="compile" description="Erstellt das JAR">
 		<jar destfile="dist/project.jar" basedir="build/classes" />
