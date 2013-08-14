@@ -7,10 +7,17 @@
     <property name="test.path" value="build/test"/>
     <property name="archive.path" value="dist"/>
 	<property name="lib.dir" value="lib" />
+	<property name="junit.results" value="test-results"/>
 	
 	<path id="classpath">
 	    <fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
+	
+	<path id="classpath.test">
+	  <path refid="classpath"/>
+		  <pathelement location="${archive.path}"/>
+		  <pathelement location="${test.path}"/>
+	</path>	
 	
 	<target name="init">
 		<mkdir dir="${build.path}" />
@@ -29,7 +36,7 @@
 		</javac>
 	</target>
 	<target name="archive" depends="compile" description="Erstellt das JAR">
-		<jar destfile="${archive.path}/${ant.project.name}" basedir="build/classes" />
+		<jar destfile="${archive.path}/${ant.project.name}" basedir="${build.path}" />
 	</target>
 	<target name="clean" depends="init" description="Räumt auf">
 		<delete dir="${build.path}" />
@@ -37,4 +44,19 @@
 		<delete dir="${archive.path}" />
 	</target>
 
+	<target name="test" depends="test-compile" description="Run unit tests">
+	  <delete dir="${junit.results}"/>
+	  <mkdir dir="${junit.results}"/>
+	  <junit fork="no" errorProperty="test.failed" failureProperty="test.failed" >
+	   <classpath refid="classpath.test" />
+	   <formatter type="plain" usefile="false"/>
+	   <formatter type="xml"/>
+	   <batchtest todir="${junit.results}">
+	    <fileset dir="${test.path}" includes="**/*Test.class"/>
+	   </batchtest>
+	  </junit>
+	  <fail message="Tests failed. Please see test reports" if="test.failed" />
+	</target>
+	
 </project>
+
